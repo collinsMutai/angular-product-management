@@ -8,6 +8,7 @@ export class ProductListComponent {
   pageTitle: string = 'Interpolation';
   imageWidth: number = 50;
   imageMargin: number = 2;
+  showImage: boolean = false;
   // pass products to html template
   products: any[] = [
     {
@@ -61,4 +62,9 @@ export class ProductListComponent {
       "imageUrl": "assets/images/xbox-controller.png"
     }
   ];
+
+  // toggle image method
+  toggleImage(): void {
+    this.showImage = !this.showImage;
+  }
 }
