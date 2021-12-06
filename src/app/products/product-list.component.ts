@@ -9,6 +9,7 @@ export class ProductListComponent {
   imageWidth: number = 50;
   imageMargin: number = 2;
   showImage: boolean = false;
+  listFilter: string = 'cart';
   // pass products to html template
   products: any[] = [
     {
