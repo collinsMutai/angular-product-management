@@ -101,4 +101,8 @@ product.productName.toLocaleLowerCase().includes(filterBy))
   ngOnInit(): void {
     this._listFilter = 'cart';
   }
+
+  onRatingClicked(message: string): void {
+    this.pageTitle = 'Product List: ' + message;
+  }
 }

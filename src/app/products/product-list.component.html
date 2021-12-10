@@ -48,7 +48,10 @@
             <td> {{ product.productCode | lowercase | convertToSpaces:'-'}}</td>
             <td> {{ product.releaseDate }}</td>
             <td> {{ product.price | currency: 'USD' : 'symbol': '1.2-2'}}</td>
-            <td> {{ product.starRating }}</td>
+            <!-- bind starRating to the rating property in the child component using property binding -->
+            <!-- event binding to listen to click events from child component to parent -->
+            <td> <pm-star [rating]='product.starRating'
+              (ratingClicked)='onRatingClicked($event)'></pm-star></td>
             
            </tr>
           </tbody>
